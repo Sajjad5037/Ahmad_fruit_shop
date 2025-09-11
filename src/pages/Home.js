@@ -43,34 +43,36 @@ const Home = () => {
       </section>
 
       {/* Banner Carousel */}
-      <div className="w-screen h-[70vh] overflow-hidden relative">
-        <div
-          className="flex transition-transform duration-1000 ease-in-out"
-          style={{ transform: `translateX(-${current * 100}%)` }}
-        >
-          {carouselImages.map((src, index) => (
-            <img
-              key={index}
-              src={src}
-              alt={`Slide ${index + 1}`}
-              className="w-screen h-[70vh] object-cover flex-shrink-0"
-            />
-          ))}
-        </div>
+      {/* Banner Carousel */}
+<div className="w-full h-[70vh] overflow-hidden relative">
+  <div
+    className="flex transition-transform duration-1000 ease-in-out"
+    style={{ transform: `translateX(-${current * 100}%)` }}
+  >
+    {carouselImages.map((src, index) => (
+      <img
+        key={index}
+        src={src}
+        alt={`Slide ${index + 1}`}
+        className="w-full h-[70vh] object-cover flex-shrink-0"
+      />
+    ))}
+  </div>
 
-        {/* Dots */}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-          {carouselImages.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrent(index)}
-              className={`w-3 h-3 rounded-full ${
-                current === index ? "bg-white" : "bg-gray-400"
-              }`}
-            ></button>
-          ))}
-        </div>
-      </div>
+  {/* Dots */}
+  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+    {carouselImages.map((_, index) => (
+      <button
+        key={index}
+        onClick={() => setCurrent(index)}
+        className={`w-3 h-3 rounded-full ${
+          current === index ? "bg-white" : "bg-gray-400"
+        }`}
+      ></button>
+    ))}
+  </div>
+</div>
+
 
       {/* Why Choose Us */}
       <section className="py-20 px-6 text-center max-w-6xl mx-auto">
