@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
- 
+
 // Sample featured products
 const featuredProducts = [
   { id: 1, name: "Fruit Basket", price: 12.99, image: "/images/featured_product1.jpg" },
@@ -26,7 +26,7 @@ const Home = () => {
 
   return (
     <div className="bg-yellow-50 min-h-screen font-sans text-gray-800">
-      
+
       {/* Hero Section */}
       <section className="relative bg-white text-center py-24">
         <h1 className="text-5xl md:text-6xl font-extrabold text-green-900 mb-6 drop-shadow-lg">
@@ -43,27 +43,29 @@ const Home = () => {
         </Link>
       </section>
 
-      
       {/* Banner Carousel */}
-      <div className="relative w-full overflow-hidden">
+      <div className="relative w-full overflow-hidden h-[70vh]">
         <div
           className="flex transition-transform duration-1000 ease-in-out"
           style={{
-            width: `${carouselImages.length * 100}%`,
-            transform: `translateX(-${current * (100 / carouselImages.length)}%)`,
+            transform: `translateX(-${current * 100}%)`,
+            width: `${carouselImages.length * 100}%`
           }}
         >
           {carouselImages.map((src, index) => (
-            <div key={index} className="w-full flex-shrink-0">
+            <div
+              key={index}
+              className="w-full flex-shrink-0 h-[70vh]"
+            >
               <img
                 src={src}
                 alt={`Slide ${index + 1}`}
-                className="block w-full h-[70vh] object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
           ))}
         </div>
-      
+
         {/* Dots */}
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
           {carouselImages.map((_, index) => (
