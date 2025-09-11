@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 // Sample featured products
@@ -6,16 +6,30 @@ const featuredProducts = [
   { id: 1, name: "Fruit Basket", price: 12.99, image: "/images/featured_product1.jpg" },
   { id: 2, name: "Dry Fruit Basket", price: 14.99, image: "/images/featured_product2.webp" },
   { id: 3, name: "Bid For Nikah", price: 16.99, image: "/images/featured_product3.webp" },
-]; 
+];
+
+const carouselImages = [
+  "/images/cover_photo.webp",
+  "/images/cover_photo2.jpeg",
+  "/images/cover_photo3.jpeg",
+];
 
 const Home = () => {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % carouselImages.length);
+    }, 4000); // slide every 4 sec
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="bg-yellow-50 min-h-screen font-sans text-gray-800">
-      
       {/* Hero Section */}
       <section className="relative bg-white text-center py-24">
         <h1 className="text-5xl md:text-6xl font-extrabold text-green-900 mb-6 drop-shadow-lg">
-          Ahmad Fruit and vegetables
+          Ahmad Fruit and Vegetables
         </h1>
         <p className="text-lg md:text-xl text-gray-700 mb-10 max-w-2xl mx-auto">
           Fresh fruits, crisp vegetables, and tender meats — delivered straight to your home
@@ -28,18 +42,35 @@ const Home = () => {
         </Link>
       </section>
 
-      {/* Banner */}
-      <div className="w-screen h-[70vh] overflow-hidden">
-        <img
-          src="/images/cover_photo.webp"
-          alt="Ahmad Fruit and Vegetables"
-          className="w-full h-full object-cover"
-        />
+      {/* Banner Carousel */}
+      <div className="w-screen h-[70vh] overflow-hidden relative">
+        <div
+          className="flex transition-transform duration-1000 ease-in-out"
+          style={{ transform: `translateX(-${current * 100}%)` }}
+        >
+          {carouselImages.map((src, index) => (
+            <img
+              key={index}
+              src={src}
+              alt={`Slide ${index + 1}`}
+              className="w-screen h-[70vh] object-cover flex-shrink-0"
+            />
+          ))}
+        </div>
+
+        {/* Dots */}
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+          {carouselImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrent(index)}
+              className={`w-3 h-3 rounded-full ${
+                current === index ? "bg-white" : "bg-gray-400"
+              }`}
+            ></button>
+          ))}
+        </div>
       </div>
-
-
-
-
 
       {/* Why Choose Us */}
       <section className="py-20 px-6 text-center max-w-6xl mx-auto">
@@ -48,7 +79,7 @@ const Home = () => {
         </h2>
         <p className="text-gray-700 mb-14 max-w-3xl mx-auto">
           We source only the finest fruits, vegetables, and meats from trusted farms and suppliers.
-          Freshness, quality, and taste are guaranteed with every delivery
+          Freshness, quality, and taste are guaranteed with every delivery.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -63,7 +94,6 @@ const Home = () => {
                 allowFullScreen
               ></iframe>
             </div>
-            
             <p>Watch how we bring you the freshest meat, every day.</p>
           </div>
 
@@ -77,8 +107,7 @@ const Home = () => {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
-            </div>                  
-            
+            </div>
             <p>Freshness you can see — our fruits in every frame</p>
           </div>
 
@@ -93,10 +122,8 @@ const Home = () => {
                 allowFullScreen
               ></iframe>
             </div>
-            
             <p>Discover the quality of our fresh stock — direct from the farm</p>
           </div>
-
         </div>
       </section>
 
