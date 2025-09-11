@@ -57,7 +57,7 @@ const Home = () => {
                 allowFullScreen
               ></iframe>
             </div>
-            <h3 className="text-xl font-semibold mb-2">Premium Quality</h3>
+            
             <p>Watch how we bring you the freshest meat, every day.</p>
           </div>
 
@@ -72,8 +72,8 @@ const Home = () => {
                 allowFullScreen
               ></iframe>
             </div>                  
-            <h3 className="text-xl font-semibold mb-2">Premium Quality</h3>
-            <p>Watch how fresh our fruits are.</p>
+            
+            <p>Freshness you can see — our fruits in every frame</p>
           </div>
 
           <div className="p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition">
@@ -87,7 +87,7 @@ const Home = () => {
                 allowFullScreen
               ></iframe>
             </div>
-            <h3 className="text-xl font-semibold mb-2">Premium Quality</h3>
+            
             <p>Discover the quality of our fresh stock — direct from the farm</p>
           </div>
 
