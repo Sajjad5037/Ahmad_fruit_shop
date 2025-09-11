@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 // Sample featured products
 const featuredProducts = [
-  { id: 1, name: "Almonds", price: 12.99, image: "/images/almonds.jpeg" },
+  { id: 1, name: "Fruit Basket", price: 12.99, image: "/images/featured_product1.jpg" },
   { id: 2, name: "Cashews", price: 14.99, image: "/images/cashews.jpeg" },
   { id: 3, name: "Walnuts", price: 16.99, image: "/images/walnuts.jpeg" },
 ];
