@@ -32,8 +32,9 @@ const Home = () => {
       <img
         src="/images/cover_photo.webp"
         alt="Ahmad Fruit and Vegetables"
-        className="w-full h-96 object-contain bg-black"
+        className="w-full h-72 object-cover"
       />
+
 
 
 
