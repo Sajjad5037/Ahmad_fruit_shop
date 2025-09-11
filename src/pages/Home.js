@@ -29,13 +29,12 @@ const Home = () => {
       </section>
 
       {/* Banner */}
-      <div className="w-screen h-[70vh] overflow-hidden">
-        <img
-          src="/images/cover_photo.webp"
-          alt="Ahmad Fruit and Vegetables"
-          className="w-full h-full object-cover"
-        />
-      </div>
+      <img
+        src="/images/cover_photo.webp"
+        alt="Ahmad Fruit and Vegetables"
+        className="w-full h-96 object-contain bg-black"
+      />
+
 
 
       {/* Why Choose Us */}
