@@ -1,0 +1,28 @@
+# Node modules
+node_modules/
+
+# Logs
+*.log
+
+# Env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build / cache folders
+dist/
+build/
+.cache/
+.next/
+.vite/
+.tmp/
+
+# IDE / Editor files
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
