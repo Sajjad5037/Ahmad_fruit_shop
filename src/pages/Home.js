@@ -58,14 +58,29 @@ const Home = () => {
               ></iframe>
             </div>
             <h3 className="text-xl font-semibold mb-2">Premium Quality</h3>
-            <p>Watch how we bring you the freshest produce, every day.</p>
+            <p>Watch how we bring you the freshest meat, every day.</p>
           </div>
 
           <div className="p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition">
             <div className="aspect-w-16 aspect-h-9 mb-4">
               <iframe
                 className="w-full h-64 rounded-xl"
-                src="https://www.youtube.com/embed/VIDEO_ID"
+                src="https://www.youtube.com/embed/XyLhARtXtDk"
+                title="YouTube video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>                  
+            <h3 className="text-xl font-semibold mb-2">Premium Quality</h3>
+            <p>Watch how fresh our fruits are.</p>
+          </div>
+
+          <div className="p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition">
+            <div className="aspect-w-16 aspect-h-9 mb-4">
+              <iframe
+                className="w-full h-64 rounded-xl"
+                src="https://www.youtube.com/embed/vzeA_ZnjnLg"
                 title="YouTube video"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -73,22 +88,7 @@ const Home = () => {
               ></iframe>
             </div>
             <h3 className="text-xl font-semibold mb-2">Premium Quality</h3>
-            <p>Watch how we bring you the freshest produce, every day.</p>
-          </div>
-
-          <div className="p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition">
-            <div className="aspect-w-16 aspect-h-9 mb-4">
-              <iframe
-                className="w-full h-64 rounded-xl"
-                src="https://www.youtube.com/embed/VIDEO_ID"
-                title="YouTube video"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Premium Quality</h3>
-            <p>Watch how we bring you the freshest produce, every day.</p>
+            <p>Discover the quality of our fresh stock — direct from the farm</p>
           </div>
 
         </div>
