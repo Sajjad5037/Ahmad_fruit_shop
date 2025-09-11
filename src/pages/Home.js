@@ -47,20 +47,50 @@ const Home = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div className="p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition">
-            <div className="text-4xl mb-4">🌟</div>
+            <div className="aspect-w-16 aspect-h-9 mb-4">
+              <iframe
+                className="w-full h-64 rounded-xl"
+                src="https://www.youtube.com/embed/VIDEO_ID"
+                title="YouTube video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
             <h3 className="text-xl font-semibold mb-2">Premium Quality</h3>
-            <p>Only the best dry fruits handpicked for you.</p>
+            <p>Watch how we bring you the freshest produce, every day.</p>
           </div>
+
           <div className="p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition">
-            <div className="text-4xl mb-4">⚡</div>
-            <h3 className="text-xl font-semibold mb-2">Fast Delivery</h3>
-            <p>Delivered fresh and on time, every time.</p>
+            <div className="aspect-w-16 aspect-h-9 mb-4">
+              <iframe
+                className="w-full h-64 rounded-xl"
+                src="https://www.youtube.com/embed/VIDEO_ID"
+                title="YouTube video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Premium Quality</h3>
+            <p>Watch how we bring you the freshest produce, every day.</p>
           </div>
+
           <div className="p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition">
-            <div className="text-4xl mb-4">💚</div>
-            <h3 className="text-xl font-semibold mb-2">Customer Satisfaction</h3>
-            <p>We prioritize quality service and happy customers.</p>
+            <div className="aspect-w-16 aspect-h-9 mb-4">
+              <iframe
+                className="w-full h-64 rounded-xl"
+                src="https://www.youtube.com/embed/VIDEO_ID"
+                title="YouTube video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Premium Quality</h3>
+            <p>Watch how we bring you the freshest produce, every day.</p>
           </div>
+
         </div>
       </section>
 
