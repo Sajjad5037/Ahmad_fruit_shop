@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const featuredProducts = [
   { id: 1, name: "Fruit Basket", price: 12.99, image: "/images/featured_product1.jpg" },
   { id: 2, name: "Dry Fruit Basket", price: 14.99, image: "/images/featured_product2.webp" },
-  { id: 3, name: "Walnuts", price: 16.99, image: "/images/featured_product3.webp" },
+  { id: 3, name: "Bid For Nikah", price: 16.99, image: "/images/featured_product3.webp" },
 ]; 
 
 const Home = () => {
