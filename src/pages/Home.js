@@ -30,7 +30,7 @@ const Home = () => {
 
       {/* Banner */}
       <img
-        src="/images/cover_photo.webp"
+        src="/images/cover_photo.jpeg"
         alt="Royal Dry Fruits Banner"
         className="w-full h-72 object-cover"
       />
