@@ -43,23 +43,27 @@ const Home = () => {
         </Link>
       </section>
 
+      
       {/* Banner Carousel */}
       <div className="relative w-full overflow-hidden">
         <div
-          className="flex w-full h-[70vh] transition-transform duration-1000 ease-in-out"
-          style={{ transform: `translateX(-${current * 100}%)` }}
+          className="flex transition-transform duration-1000 ease-in-out"
+          style={{
+            width: `${carouselImages.length * 100}%`,
+            transform: `translateX(-${current * (100 / carouselImages.length)}%)`,
+          }}
         >
           {carouselImages.map((src, index) => (
             <div key={index} className="w-full flex-shrink-0">
               <img
                 src={src}
                 alt={`Slide ${index + 1}`}
-                className="w-full h-[70vh] object-cover block"
+                className="block w-full h-[70vh] object-cover"
               />
             </div>
           ))}
         </div>
-
+      
         {/* Dots */}
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
           {carouselImages.map((_, index) => (
