@@ -50,7 +50,7 @@ const Home = () => {
             <div className="aspect-w-16 aspect-h-9 mb-4">
               <iframe
                 className="w-full h-64 rounded-xl"
-                src="https://youtu.be/1opFRVdQ0vo?si=rscgvQM1a4v8FXhB" 
+                src="https://www.youtube.com/embed/1opFRVdQ0vo"
                 title="YouTube video"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
