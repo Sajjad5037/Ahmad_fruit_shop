@@ -15,10 +15,10 @@ const Home = () => {
       {/* Hero Section */}
       <section className="relative bg-white text-center py-24">
         <h1 className="text-5xl md:text-6xl font-extrabold text-green-900 mb-6 drop-shadow-lg">
-          Royal Dry Fruits
+          Ahmad Fruit and vegetables
         </h1>
         <p className="text-lg md:text-xl text-gray-700 mb-10 max-w-2xl mx-auto">
-          Premium quality dry fruits, carefully handpicked and delivered fresh to your doorstep.
+          Fresh fruits, crisp vegetables, and tender meats — delivered straight to your home
         </p>
         <Link
           to="/ShopOnline"
@@ -41,8 +41,8 @@ const Home = () => {
           Why Choose Us?
         </h2>
         <p className="text-gray-700 mb-14 max-w-3xl mx-auto">
-          We carefully select only the finest nuts and dried fruits, sourced directly from trusted farms.
-          Freshness, quality, and taste are guaranteed in every pack.
+          We source only the finest fruits, vegetables, and meats from trusted farms and suppliers.
+          Freshness, quality, and taste are guaranteed with every delivery
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
