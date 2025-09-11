@@ -20,12 +20,13 @@ const Home = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % carouselImages.length);
-    }, 4000); // slide every 4 sec
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="bg-yellow-50 min-h-screen font-sans text-gray-800">
+      
       {/* Hero Section */}
       <section className="relative bg-white text-center py-24">
         <h1 className="text-5xl md:text-6xl font-extrabold text-green-900 mb-6 drop-shadow-lg">
@@ -43,36 +44,35 @@ const Home = () => {
       </section>
 
       {/* Banner Carousel */}
-      {/* Banner Carousel */}
-<div className="w-full h-[70vh] overflow-hidden relative">
-  <div
-    className="flex transition-transform duration-1000 ease-in-out"
-    style={{ transform: `translateX(-${current * 100}%)` }}
-  >
-    {carouselImages.map((src, index) => (
-      <img
-        key={index}
-        src={src}
-        alt={`Slide ${index + 1}`}
-        className="w-full h-[70vh] object-cover flex-shrink-0"
-      />
-    ))}
-  </div>
+      <div className="relative w-full overflow-hidden">
+        <div
+          className="flex w-full h-[70vh] transition-transform duration-1000 ease-in-out"
+          style={{ transform: `translateX(-${current * 100}%)` }}
+        >
+          {carouselImages.map((src, index) => (
+            <div key={index} className="w-full flex-shrink-0">
+              <img
+                src={src}
+                alt={`Slide ${index + 1}`}
+                className="w-full h-[70vh] object-cover block"
+              />
+            </div>
+          ))}
+        </div>
 
-  {/* Dots */}
-  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-    {carouselImages.map((_, index) => (
-      <button
-        key={index}
-        onClick={() => setCurrent(index)}
-        className={`w-3 h-3 rounded-full ${
-          current === index ? "bg-white" : "bg-gray-400"
-        }`}
-      ></button>
-    ))}
-  </div>
-</div>
-
+        {/* Dots */}
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+          {carouselImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrent(index)}
+              className={`w-3 h-3 rounded-full ${
+                current === index ? "bg-white" : "bg-gray-400"
+              }`}
+            ></button>
+          ))}
+        </div>
+      </div>
 
       {/* Why Choose Us */}
       <section className="py-20 px-6 text-center max-w-6xl mx-auto">
