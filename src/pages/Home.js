@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+ 
 // Sample featured products
 const featuredProducts = [
   { id: 1, name: "Fruit Basket", price: 12.99, image: "/images/featured_product1.jpg" },
